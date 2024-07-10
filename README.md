@@ -18,6 +18,6 @@ In this tutorial, we are going to create 2 VMs in Azure and observe various netw
 
 <h2>Operating Systems Used </h2>
 
-- Windows 10 (21H2)
+- Windows 10 (22H2)
 - Ubuntu Server 20.04
 
