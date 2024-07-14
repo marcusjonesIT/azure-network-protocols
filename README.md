@@ -181,6 +181,18 @@ Now that we're logged in you can type commands (id, uname -a, pwd, etc.) in the 
 </p>
 <br />
 
+![image](https://github.com/user-attachments/assets/1426026e-a507-4d57-8573-8b9613072f40)
+![image](https://github.com/user-attachments/assets/a329ab42-6b3a-4bd1-8f48-fd73678f5ba7)
+
+<p>
+Next we're going to observe DNS traffic so type "DNS" into the filter the press enter. We will use the "nslookup" command which will pretty much ask the DNS server what the IP Address is for any given Host name. For example (nslookup www.google.com or nslookup www.espn.com) this essentially asks our DNS server what the IP Addresses for Google and ESPN. Note: Instead of typing DNS in the filter you can also use (UDP.port==53) to observe the DNS traffic because DNS uses Port 53.
+</p>
+<br />
+
+
+
+
+
 
 
 
