@@ -189,6 +189,13 @@ Next we're going to observe DNS traffic so type "DNS" into the filter the press 
 </p>
 <br />
 
+![image](https://github.com/user-attachments/assets/afa337d8-8d8d-4d82-86de-d2a33ba0cc45)
+<p>
+Lastly, we will observe RDP traffic. So in the filter we can type RDP or tcp.port==3389. Immediately you should see it spamming non-stop and thats because there's like an actual live RDP session session from our Host Computer like our physical computer to the Virtual Machine. So essentially whatever we're doing on our actual computer it just sends traffic to this VM so that's why we see this non-stop traffic coming through because it's like a stream of traffic as we're using the VM if that makes sense. 
+</p>
+<br />
+
+
 
 
 
