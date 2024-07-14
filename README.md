@@ -89,7 +89,7 @@ The privacy settings don't really matter in the lab so you can deselect the sett
 </p>
 <br /> 
 
-<h2>Part 2 (Network Observations)</h2>
+<h2>Part 2 (Network Observations) Starting with ICMP Traffic</h2>
 We are going do download and install Wireshark to observe network traffic between the VMs. "Wireshark is a free and open-source packet analyzer. It is used for network troubleshooting, analysis, software and communications protocol development, and education."
 
 ![image](https://github.com/marcusjonesIT/azure-network-protocols/assets/174873189/12c58a59-3ca0-4df0-acdd-de50bb64eb65)
@@ -139,8 +139,56 @@ Open the Network Security Group settings for VM2 and select Inbound Security Rul
 
 ![image](https://github.com/marcusjonesIT/azure-network-protocols/assets/174873189/016f448f-44d8-4431-bd3e-3c4c3e2721b9)
 <p>
-  
+Navigate back to the Windows VM and you can now see that all inbound ICMP traffic is being blocked after applying the rule that we created. 
 </p>
+<br />
+
+![image](https://github.com/marcusjonesIT/azure-network-protocols/assets/174873189/a6255567-1480-4bb9-a109-df3764578b2f)
+<p>
+Now we will go back to the NSG settings for VM 2 and allow inbound ICMP traffic and you will be able to see the pinging activity as shown above in the picture. To interupt the non-stop ping you can hit ctrl + c and the ping activity will stop. 
+</p>
+<br />
+
+<h2>Observe SSH Traffic</h2>
+
+![image](https://github.com/marcusjonesIT/azure-network-protocols/assets/174873189/e2ac14eb-cffb-401a-9d42-c29974bbe0fe)
+<p>
+Navigate back to Wireshark and filter for SSH traffic only.   
+</p>
+<br />
+
+![image](https://github.com/marcusjonesIT/azure-network-protocols/assets/174873189/7f899cef-a69a-4588-94f3-095c220b006a)
+<p>
+From the Windows VM we're going to "SSH into" the Ubuntu VM via it's Private IP Address using (ssh labuser@10.0.0.5) as shown above.  
+</p>
+<br />
+
+![image](https://github.com/user-attachments/assets/7a4b1034-3050-4a86-a938-4a979074837a)
+<p>
+Immediately when we try to initiate the SSH connection you will observe some SSH traffic since we are filtering for SSH in Wireshark.
+</p>
+<br />
+
+![image](https://github.com/user-attachments/assets/37eaead4-370a-43dc-8ff5-6000eb2a21b2)
+<p>
+It will ask you if you are sure you want to connecting, type yes and press enter. When entering the password it's not going to actually show the password on the screen so just know when you're typing the password it is going into the terminal. Note: If you think you messed up just hit enter once and fail it then enter the password again or just hit backspace a bunch of times.
+</p>
+<br />
+
+![image](https://github.com/user-attachments/assets/62dfad61-302f-41e0-a999-0e2b63b6e9ee)
+<p>
+Now that we're logged in you can type commands (id, uname -a, pwd, etc.) in the Linux SSH connection and observe SSH traffic spam in Wireshark. When you are done just type exit and hit enter to close the connection. 
+</p>
+<br />
+
+
+
+
+
+
+
+
+
 
 
 
